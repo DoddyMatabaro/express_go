@@ -6,7 +6,9 @@ const rootDir = require('../util/helper')
 const router = express.Router();
 
 router.get('/add-product',(req, res, next)=>{
-    res.sendFile(path.join(rootDir,'views', 'add-product.html'));
+    // res.sendFile(path.join(rootDir,'views', 'add-product.html'));
+    res.render('add-product',{docTitle: 'Product'});
+
 });
 
 router.post('/product', (req, res, next)=>{
